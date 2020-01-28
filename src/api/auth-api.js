@@ -7,13 +7,16 @@ export const logoutUser = () => {
 
 export const signInUser = async ({ name, email, password }) => {
   try {
-    await firebase.auth().createUserWithEmailAndPassword(email, password);
+    console.log("hello");
+    const res = await firebase.auth().createUserWithEmailAndPassword(email, password);
+    console.log(res,name, email, password);
     firebase.auth().currentUser.updateProfile({
       displayName: name
     });
 
     return {};
   } catch (error) {
+    console.log(error)
     switch (error.code) {
       case "auth/email-already-in-use":
         return {

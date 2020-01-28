@@ -1,28 +1,29 @@
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import {createAppContainer} from "react-navigation";
+import {createStackNavigator} from "react-navigation-stack";
 
 import {
-  HomeScreen,
-  LoginScreen,
-  RegisterScreen,
-  ForgotPasswordScreen,
-  AuthLoadingScreen,
-  Dashboard
-} from "./screens";
-
-const Router = createStackNavigator(
-  {
+    AuthLoadingScreen,
+    Dashboard,
+    ForgotPasswordScreen,
     HomeScreen,
     LoginScreen,
     RegisterScreen,
-    ForgotPasswordScreen,
-    Dashboard,
-    AuthLoadingScreen
-  },
-  {
-    initialRouteName: "AuthLoadingScreen",
-    headerMode: "none"
-  }
+    Webview
+} from "./screens";
+
+const Router = createStackNavigator(
+    {
+        HomeScreen,
+        LoginScreen,
+        RegisterScreen,
+        ForgotPasswordScreen,
+        Dashboard,
+        AuthLoadingScreen,
+        Webview
+    },
+    {
+        initialRouteName: "AuthLoadingScreen",
+    }
 );
 
 export default createAppContainer(Router);

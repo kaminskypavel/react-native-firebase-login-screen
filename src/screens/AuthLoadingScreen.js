@@ -1,7 +1,8 @@
 import React, { memo } from "react";
 import { ActivityIndicator } from "react-native";
 import firebase from "firebase/app";
-import "firebase/auth";
+import "firebase";
+
 import Background from "../components/Background";
 import { theme } from "../core/theme";
 import { FIREBASE_CONFIG } from "../core/config";
@@ -10,6 +11,9 @@ import { FIREBASE_CONFIG } from "../core/config";
 firebase.initializeApp(FIREBASE_CONFIG);
 
 const AuthLoadingScreen = ({ navigation }) => {
+  // const enabled = await firebase.messaging().hasPermission();
+  // console.log("messaging = ",enabled);
+
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
       // User is logged in

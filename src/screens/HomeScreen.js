@@ -16,6 +16,9 @@ const HomeScreen = ({ navigation }) => (
     <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
       Login
     </Button>
+    <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
+      Google Login
+    </Button>
     <Button
       mode="outlined"
       onPress={() => navigation.navigate("RegisterScreen")}
