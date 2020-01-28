@@ -1,15 +1,9 @@
 # React Native Firebase Login Screen
 
-More templates at [ReactNativeMarket.com](http://reactnativemarket.com/) 💖
+## Push Notification
 
-This repo is proudly sponsored by
-
-<a href="https://nativeforms.com" rel="nofollow" target="_blank">
-  <img src="https://raw.githubusercontent.com/venits/native-forms/master/assets/sponsor.png" width="350"><br />
-  Build forms, surveys and polls for React Native apps.
-</a>
-
-
+1. add a `google-services` to project root
+2. copy `src/core/config.example.js` to `config.js` and add credentials 
 ## How to use?
 
 1. Download or clone this repo.
